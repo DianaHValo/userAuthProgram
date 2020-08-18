@@ -1,0 +1,42 @@
+﻿<Window x:Class="UserAuth.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserAuth"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+        
+        
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Insert password" Height="80" Width="190" FontSize="25" HorizontalAlignment="Left" Margin="10"></Label>
+                <TextBox Text="{Binding passwordInsert, UpdateSourceTrigger=PropertyChanged}" Height="80" Width="220" FontSize="15" HorizontalAlignment="Right" Margin="70,30,30,30"></TextBox>
+                <Label Content="{Binding passwordInfoText}" Height="80" Width="220" FontSize="15" HorizontalAlignment="Left" Margin="30,30,70,30"></Label>
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal">
+                <Button Command="{Binding checkPasswordCommand}"  Content="Check password" Height="80" Width="190" FontSize="25" HorizontalAlignment="Left" Margin="10"></Button>
+                <Label Content="{Binding passwordLenghtText}" Height="80" Width="220" FontSize="15" HorizontalAlignment="Left" Margin="70,30,30,30"></Label>
+            </StackPanel>
+           
+
+
+            <StackPanel Orientation="Horizontal">
+                <Button Command="{Binding SuggestPasswordCommand}" Content="Suggest password" Height="80" Width="190" FontSize="25" HorizontalAlignment="Left" Margin="10"></Button>
+                <Label Content="{Binding passwordSuggestionv1}" Height="80" Width="220" FontSize="15" HorizontalAlignment="Left" Margin="70,30,30,30"></Label>
+                <Label Content="{Binding passwordSuggestionv2}" Height="80" Width="220" FontSize="15" HorizontalAlignment="Right" Margin="30,30,70,30"></Label>
+                
+
+            </StackPanel>
+        </StackPanel>
+        
+
+        
+
+
+
+    </Grid>
+</Window>
